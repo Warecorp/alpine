@@ -27,7 +27,8 @@ node {
         docker.withRegistry('', 'dockerwc') {
             alpine38.push()
             alpine37.push()
-            alpine38.push("latest")
+            alpine38.push("38-latest")
+            alpine37.push("37-latest")
         }
     }
   }
