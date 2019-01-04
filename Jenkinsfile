@@ -28,9 +28,6 @@ alpine38 {
         }
     }
   }
-}
-
-alpine37 {
     def alpine37
 
     docker.withRegistry('', 'dockerwc') {
