@@ -6,6 +6,8 @@ FROM alpine:${ALPINE_VER}
 ENV DEPLOY_USER_ID=1000
 ENV DEPLOY_GROUP_ID=1000
 
+LABEL maintainer="borisdr@gmail.com"
+
 RUN set -xe; \
     \
     apk add --update --no-cache \
