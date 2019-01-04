@@ -1,12 +1,7 @@
-environment {
-    registry = “warecorpdev/alpine"
-    registryCredential = 'dockerwc’
-}
-
 node {
     def alpine38
 
-    docker.withRegistry('https://hub.docker.com', 'dockerwc') {
+    docker.withRegistry('', 'dockerwc') {
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
