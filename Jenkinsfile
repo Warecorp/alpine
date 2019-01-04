@@ -23,7 +23,7 @@ node {
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
         docker.withRegistry('', 'dockerwc') {
-            alpine38.push("warecorpdev/alpine:3.8-${env.BUILD_ID}")
+            alpine38.push()
             alpine38.push("latest")
         }
     }
