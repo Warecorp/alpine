@@ -1,4 +1,4 @@
-alpine38 {
+node {
     def alpine38
     def alpine37
 
