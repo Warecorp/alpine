@@ -22,8 +22,8 @@ node {
          * First, the incremental build number from alpine38
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
-        docker.withRegistry('https://hub.warecorp.com/alpine38/alpine38', 'wc-hub') {
-            alpine38.push("${env.BUILD_NUMBER}")
+        docker.withRegistry('', 'dockerwc') {
+            alpine38.push("warecorpdev/alpine:3.8-${env.BUILD_ID}")
             alpine38.push("latest")
         }
     }
