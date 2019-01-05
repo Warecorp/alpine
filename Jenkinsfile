@@ -31,5 +31,8 @@ node {
             alpine37.push("3.7-latest")
         }
     }
+    stage('Post') {
+    slackSend botUser: true, channel: 'docker-build', message: 'Alpine Images rebuilded', teamDomain: 'warecorp', tokenCredentialId: 'jenkins-token'
+    }
   }
 }
